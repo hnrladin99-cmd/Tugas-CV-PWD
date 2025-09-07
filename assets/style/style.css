@@ -1,0 +1,230 @@
+body {
+font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.cv-container {
+    width: 210mm; /* A4 width */
+    min-height: 297mm; /* A4 height */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden; /* Ensure rounded corners apply */
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #ff8c8c; /* Light blue background for header */
+    padding: 20px 40px;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    height: 180px; /* Fixed height for the header */
+    overflow: hidden; /* Hide overflowing parts of the image */
+}
+
+.profile-picture-container {
+    width: 140px; /* Adjusted size for the circle */
+    height: 140px; /* Adjusted size for the circle */
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid white; /* White border around the image */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: absolute; /* Position it absolutely within the header */
+    left: 40px;
+    bottom: 20px; /* Overlap with the content section */
+    z-index: 2; /* Make sure it's above other elements */
+}
+
+.profile-picture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; /* Adjust if needed to fit face */
+}
+
+.header-text {
+    margin-left: 200px; /* Space for the profile picture */
+    color: #333;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #2c3e50; /* Darker blue for name */
+}
+
+.header-text p {
+    margin: 5px 0 0;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Main Content Section */
+.main-content {
+    display: flex;
+    flex-grow: 1;
+}
+
+/* Left Column */
+.left-column {
+    width: 35%; /* Adjust as needed */
+    background-color: #fae2e2; /* Light grey background for left column */
+    padding: 40px 25px 40px 40px; /* Adjusted padding to match image */
+    box-sizing: border-box;
+    border-right: 1px solid #eee;
+    color: #333;
+}
+
+.left-column section {
+    margin-bottom: 30px;
+}
+
+.left-column h2 {
+    font-size: 1.3em;
+    color: #2c3e50; /* Darker blue for titles */
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #aec6cf; /* Light blue border */
+    padding-bottom: 5px;
+}
+
+.profile-text {
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-top: -5px;
+}
+
+.left-column ul {
+    list-style: none;
+    padding: 0;
+    margin-top: -5px;
+}
+
+.left-column ul li {
+    margin-bottom: 10px;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.left-column ul li strong {
+    display: block;
+    font-weight: 600;
+    color: #444;
+}
+
+.left-column .education-year {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.social-media-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.social-media-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    filter: invert(10%); /* Make icons darker if they are light */
+}
+
+.social-media-item a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.social-media-item p {
+    margin: 0;
+    color: #555;
+}
+
+/* Specific styling for contact info */
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.contact-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    filter: invert(10%);
+}
+.contact-item a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 500;
+}
+.contact-item p {
+    margin: 0;
+    color: #555;
+}
+
+/* Right Column */
+.right-column {
+    width: 65%; /* Adjust as needed */
+    padding: 40px 40px 40px 25px; /* Adjusted padding to match image */
+    box-sizing: border-box;
+    color: #333;
+}
+
+.right-column section {
+    margin-bottom: 30px;
+}
+
+.right-column h2 {
+    font-size: 1.3em;
+    color: #2c3e50; /* Darker blue for titles */
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid #aec6cf; /* Light blue border */
+    padding-bottom: 5px;
+}
+
+.right-column ul {
+    list-style: none;
+    padding: 0;
+    margin-top: -5px;
+}
+
+.right-column ul li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+.right-column ul li::before {
+    content: '•'; /* Bullet point */
+    color: #007bff; /* Blue color for bullet */
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
